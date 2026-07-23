@@ -1,0 +1,22 @@
+{
+  "RandomNegativeItemNoun": "gunoi#deșeu#vechitură#mizerie#porcărie",
+  "RandomPositiveAdjective_Child": "tare#amuzant#mișto#simpatic#fain#super#grozav",
+  "RandomPositiveAdjective_AdultMale": "interesant#palpitant#tare#amuzant#grozav#extraordinar",
+  "RandomPositiveAdjective_AdultFemale": "minunată#uimitoare#emoționantă#magică#incredibilă#fermecătoare#electrizantă#încântătoare",
+  "RandomPositiveAdjective_PlaceOrEvent": "minunat#uimitor#emoționant#magic#incredibil#fermecător#electrizant#încântător",
+  "RandomDeliciousAdjective": "delicios#gustos#minunat#satisfăcător#săturos#delectabil#apetisant#încântător",
+  "RandomDeliciousAdjective_Child": "delicios",
+  "RandomNegativeFoodAdjective_Child": "scârbos",
+  "RandomNegativeFoodAdjective_Polite": "...interesant#...neobișnuit#...diferit#...neconvențional",
+  "RandomNegativeFoodAdjective": "dezgustător#scârbos#respingător#josnic#revoltător#grețos#groaznic#repulsiv#vomitiv#infect#oribil#putred",
+  "RandomSlightlyPositiveFoodAdjective": "decent#bun#comestibil",
+  "ChildTerm_Male": "băiat",
+  "ChildTerm_Female": "fată",
+  "Pronoun_Male": "el",
+  "Pronoun_Female": "ea",
+  "QuestionDialogue_Yes": "Da",
+  "QuestionDialogue_No": "Nu",
+  "GenericPlayerTerm": "fermier",
+  "Possessive_Pronoun_Male": "lui",
+  "Possessive_Pronoun_Female": "ei"
+}

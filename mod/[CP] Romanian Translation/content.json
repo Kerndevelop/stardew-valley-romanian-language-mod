@@ -1,0 +1,1577 @@
+{
+  "Format": "2.6.0",
+  "Changes": [
+    {
+      "Action": "EditData",
+      "Target": "Data/AdditionalLanguages",
+      "Entries": {
+        "kerngesund.RomanianTranslation_ro": {
+          "ID": "kerngesund.RomanianTranslation_ro",
+          "LanguageCode": "ro",
+          "ButtonTexture": "Mods/kerngesund.RomanianTranslation/Button",
+          "UseLatinFont": true,
+          "TimeFormat": "[HOURS_24_00]:[MINUTES]",
+          "ClockTimeFormat": "[HOURS_24_00]:[MINUTES]",
+          "ClockDateFormat": "[DAY_OF_WEEK] [DAY_OF_MONTH]"
+        }
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/kerngesund.RomanianTranslation/Button",
+      "FromFile": "assets/button.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Abigail",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Abigail.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Alex",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Alex.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Caroline",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Caroline.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Clint",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Clint.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Demetrius",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Demetrius.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Dwarf",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Dwarf.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Elliott",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Elliott.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Emily",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Emily.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Evelyn",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Evelyn.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/George",
+      "FromFile": "assets/content_ro/Characters/Dialogue/George.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Gil",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Gil.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Gus",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Gus.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Haley",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Haley.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Harvey",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Harvey.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Jas",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Jas.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Jodi",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Jodi.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Kent",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Kent.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Krobus",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Krobus.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Leah",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Leah.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Leo",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Leo.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/LeoMainland",
+      "FromFile": "assets/content_ro/Characters/Dialogue/LeoMainland.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Lewis",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Lewis.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Linus",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Linus.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Marnie",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Marnie.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogue",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogue.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueAbigail",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueAbigail.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueAlex",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueAlex.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueElliott",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueElliott.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueEmily",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueEmily.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueHaley",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueHaley.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueHarvey",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueHarvey.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueKrobus",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueKrobus.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueLeah",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueLeah.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueMaru",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueMaru.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialoguePenny",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialoguePenny.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueSam",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueSam.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueSebastian",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueSebastian.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/MarriageDialogueShane",
+      "FromFile": "assets/content_ro/Characters/Dialogue/MarriageDialogueShane.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Maru",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Maru.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Mister Qi",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Mister Qi.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Pam",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Pam.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Penny",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Penny.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Pierre",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Pierre.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Robin",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Robin.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Sam",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Sam.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Sandy",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Sandy.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Sebastian",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Sebastian.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Shane",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Shane.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Vincent",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Vincent.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Willy",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Willy.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/Wizard",
+      "FromFile": "assets/content_ro/Characters/Dialogue/Wizard.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Dialogue/rainy",
+      "FromFile": "assets/content_ro/Characters/Dialogue/rainy.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Achievements",
+      "FromFile": "assets/content_ro/Data/Achievements.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/BigCraftables",
+      "FromFile": "assets/content_ro/Data/BigCraftables.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Boots",
+      "FromFile": "assets/content_ro/Data/Boots.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Bundles",
+      "FromFile": "assets/content_ro/Data/Bundles.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/EngagementDialogue",
+      "FromFile": "assets/content_ro/Data/EngagementDialogue.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/AbandonedJojaMart",
+      "FromFile": "assets/content_ro/Data/Events/AbandonedJojaMart.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/AnimalShop",
+      "FromFile": "assets/content_ro/Data/Events/AnimalShop.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/ArchaeologyHouse",
+      "FromFile": "assets/content_ro/Data/Events/ArchaeologyHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Backwoods",
+      "FromFile": "assets/content_ro/Data/Events/Backwoods.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/BathHouse_Pool",
+      "FromFile": "assets/content_ro/Data/Events/BathHouse_Pool.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Beach",
+      "FromFile": "assets/content_ro/Data/Events/Beach.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/BoatTunnel",
+      "FromFile": "assets/content_ro/Data/Events/BoatTunnel.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/BusStop",
+      "FromFile": "assets/content_ro/Data/Events/BusStop.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/CommunityCenter",
+      "FromFile": "assets/content_ro/Data/Events/CommunityCenter.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/DesertFestival",
+      "FromFile": "assets/content_ro/Data/Events/DesertFestival.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/ElliottHouse",
+      "FromFile": "assets/content_ro/Data/Events/ElliottHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Farm",
+      "FromFile": "assets/content_ro/Data/Events/Farm.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/FarmHouse",
+      "FromFile": "assets/content_ro/Data/Events/FarmHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/FishShop",
+      "FromFile": "assets/content_ro/Data/Events/FishShop.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Forest",
+      "FromFile": "assets/content_ro/Data/Events/Forest.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/HaleyHouse",
+      "FromFile": "assets/content_ro/Data/Events/HaleyHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/HarveyRoom",
+      "FromFile": "assets/content_ro/Data/Events/HarveyRoom.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Hospital",
+      "FromFile": "assets/content_ro/Data/Events/Hospital.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/IslandHut",
+      "FromFile": "assets/content_ro/Data/Events/IslandHut.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/IslandNorth",
+      "FromFile": "assets/content_ro/Data/Events/IslandNorth.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/IslandSouth",
+      "FromFile": "assets/content_ro/Data/Events/IslandSouth.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/IslandWest",
+      "FromFile": "assets/content_ro/Data/Events/IslandWest.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/JoshHouse",
+      "FromFile": "assets/content_ro/Data/Events/JoshHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/LeahHouse",
+      "FromFile": "assets/content_ro/Data/Events/LeahHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/ManorHouse",
+      "FromFile": "assets/content_ro/Data/Events/ManorHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Mine",
+      "FromFile": "assets/content_ro/Data/Events/Mine.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Mountain",
+      "FromFile": "assets/content_ro/Data/Events/Mountain.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/QiNutRoom",
+      "FromFile": "assets/content_ro/Data/Events/QiNutRoom.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Railroad",
+      "FromFile": "assets/content_ro/Data/Events/Railroad.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Saloon",
+      "FromFile": "assets/content_ro/Data/Events/Saloon.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/SamHouse",
+      "FromFile": "assets/content_ro/Data/Events/SamHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/SandyHouse",
+      "FromFile": "assets/content_ro/Data/Events/SandyHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/ScienceHouse",
+      "FromFile": "assets/content_ro/Data/Events/ScienceHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/SebastianRoom",
+      "FromFile": "assets/content_ro/Data/Events/SebastianRoom.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/SeedShop",
+      "FromFile": "assets/content_ro/Data/Events/SeedShop.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Sewer",
+      "FromFile": "assets/content_ro/Data/Events/Sewer.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Sunroom",
+      "FromFile": "assets/content_ro/Data/Events/Sunroom.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Temp",
+      "FromFile": "assets/content_ro/Data/Events/Temp.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Tent",
+      "FromFile": "assets/content_ro/Data/Events/Tent.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Town",
+      "FromFile": "assets/content_ro/Data/Events/Town.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Trailer",
+      "FromFile": "assets/content_ro/Data/Events/Trailer.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Trailer_Big",
+      "FromFile": "assets/content_ro/Data/Events/Trailer_Big.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/WizardHouse",
+      "FromFile": "assets/content_ro/Data/Events/WizardHouse.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Events/Woods",
+      "FromFile": "assets/content_ro/Data/Events/Woods.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/ExtraDialogue",
+      "FromFile": "assets/content_ro/Data/ExtraDialogue.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/FestivalDates",
+      "FromFile": "assets/content_ro/Data/Festivals/FestivalDates.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/fall16",
+      "FromFile": "assets/content_ro/Data/Festivals/fall16.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/fall27",
+      "FromFile": "assets/content_ro/Data/Festivals/fall27.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/spring13",
+      "FromFile": "assets/content_ro/Data/Festivals/spring13.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/spring24",
+      "FromFile": "assets/content_ro/Data/Festivals/spring24.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/summer11",
+      "FromFile": "assets/content_ro/Data/Festivals/summer11.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/summer28",
+      "FromFile": "assets/content_ro/Data/Festivals/summer28.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/winter25",
+      "FromFile": "assets/content_ro/Data/Festivals/winter25.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Festivals/winter8",
+      "FromFile": "assets/content_ro/Data/Festivals/winter8.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Fish",
+      "FromFile": "assets/content_ro/Data/Fish.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Furniture",
+      "FromFile": "assets/content_ro/Data/Furniture.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Monsters",
+      "FromFile": "assets/content_ro/Data/Monsters.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/NPCGiftTastes",
+      "FromFile": "assets/content_ro/Data/NPCGiftTastes.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Objects",
+      "FromFile": "assets/content_ro/Data/Objects.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Quests",
+      "FromFile": "assets/content_ro/Data/Quests.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/RandomBundles",
+      "FromFile": "assets/content_ro/Data/RandomBundles.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/SecretNotes",
+      "FromFile": "assets/content_ro/Data/SecretNotes.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Shirts",
+      "FromFile": "assets/content_ro/Data/Shirts.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/TV/CookingChannel",
+      "FromFile": "assets/content_ro/Data/TV/CookingChannel.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/TV/TipChannel",
+      "FromFile": "assets/content_ro/Data/TV/TipChannel.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/Weapons",
+      "FromFile": "assets/content_ro/Data/Weapons.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/hats",
+      "FromFile": "assets/content_ro/Data/hats.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Data/mail",
+      "FromFile": "assets/content_ro/Data/mail.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "LooseSprites/Billboard",
+      "FromFile": "assets/content_ro/LooseSprites/Billboard.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "LooseSprites/JojaCDForm",
+      "FromFile": "assets/content_ro/LooseSprites/JojaCDForm.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "LooseSprites/font_bold",
+      "FromFile": "assets/content_ro/LooseSprites/font_bold.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Maps/FishingDerbyTiles",
+      "FromFile": "assets/content_ro/Maps/FishingDerbyTiles.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Minigames/Intro",
+      "FromFile": "assets/content_ro/Minigames/Intro.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Minigames/TitleButtons",
+      "FromFile": "assets/content_ro/Minigames/TitleButtons.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Minigames/Xb1ProfileButton",
+      "FromFile": "assets/content_ro/Minigames/Xb1ProfileButton.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Minigames/jojacorps",
+      "FromFile": "assets/content_ro/Minigames/jojacorps.png",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/1_6_Strings",
+      "FromFile": "assets/content_ro/Strings/1_6_Strings.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/BigCraftables",
+      "FromFile": "assets/content_ro/Strings/BigCraftables.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Buildings",
+      "FromFile": "assets/content_ro/Strings/Buildings.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/BundleNames",
+      "FromFile": "assets/content_ro/Strings/BundleNames.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Characters",
+      "FromFile": "assets/content_ro/Strings/Characters.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/EnchantmentNames",
+      "FromFile": "assets/content_ro/Strings/EnchantmentNames.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Events",
+      "FromFile": "assets/content_ro/Strings/Events.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/FarmAnimals",
+      "FromFile": "assets/content_ro/Strings/FarmAnimals.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Furniture",
+      "FromFile": "assets/content_ro/Strings/Furniture.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Lexicon",
+      "FromFile": "assets/content_ro/Strings/Lexicon.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Locations",
+      "FromFile": "assets/content_ro/Strings/Locations.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/MovieConcessions",
+      "FromFile": "assets/content_ro/Strings/MovieConcessions.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/MovieReactions",
+      "FromFile": "assets/content_ro/Strings/MovieReactions.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Movies",
+      "FromFile": "assets/content_ro/Strings/Movies.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/NPCNames",
+      "FromFile": "assets/content_ro/Strings/NPCNames.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Notes",
+      "FromFile": "assets/content_ro/Strings/Notes.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Objects",
+      "FromFile": "assets/content_ro/Strings/Objects.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Pants",
+      "FromFile": "assets/content_ro/Strings/Pants.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Quests",
+      "FromFile": "assets/content_ro/Strings/Quests.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Shirts",
+      "FromFile": "assets/content_ro/Strings/Shirts.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/SimpleNonVillagerDialogues",
+      "FromFile": "assets/content_ro/Strings/SimpleNonVillagerDialogues.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/SpecialOrderStrings",
+      "FromFile": "assets/content_ro/Strings/SpecialOrderStrings.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/SpeechBubbles",
+      "FromFile": "assets/content_ro/Strings/SpeechBubbles.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/StringsFromCSFiles",
+      "FromFile": "assets/content_ro/Strings/StringsFromCSFiles.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/StringsFromMaps",
+      "FromFile": "assets/content_ro/Strings/StringsFromMaps.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Tools",
+      "FromFile": "assets/content_ro/Strings/Tools.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/UI",
+      "FromFile": "assets/content_ro/Strings/UI.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/Weapons",
+      "FromFile": "assets/content_ro/Strings/Weapons.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/WorldMap",
+      "FromFile": "assets/content_ro/Strings/WorldMap.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/animationDescriptions",
+      "FromFile": "assets/content_ro/Strings/animationDescriptions.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/credits",
+      "FromFile": "assets/content_ro/Strings/credits.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Abigail",
+      "FromFile": "assets/content_ro/Strings/schedules/Abigail.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Alex",
+      "FromFile": "assets/content_ro/Strings/schedules/Alex.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Caroline",
+      "FromFile": "assets/content_ro/Strings/schedules/Caroline.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Clint",
+      "FromFile": "assets/content_ro/Strings/schedules/Clint.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Demetrius",
+      "FromFile": "assets/content_ro/Strings/schedules/Demetrius.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Elliott",
+      "FromFile": "assets/content_ro/Strings/schedules/Elliott.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Emily",
+      "FromFile": "assets/content_ro/Strings/schedules/Emily.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Evelyn",
+      "FromFile": "assets/content_ro/Strings/schedules/Evelyn.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/George",
+      "FromFile": "assets/content_ro/Strings/schedules/George.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Gus",
+      "FromFile": "assets/content_ro/Strings/schedules/Gus.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Haley",
+      "FromFile": "assets/content_ro/Strings/schedules/Haley.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Harvey",
+      "FromFile": "assets/content_ro/Strings/schedules/Harvey.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Jas",
+      "FromFile": "assets/content_ro/Strings/schedules/Jas.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Jodi",
+      "FromFile": "assets/content_ro/Strings/schedules/Jodi.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Leah",
+      "FromFile": "assets/content_ro/Strings/schedules/Leah.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Leo",
+      "FromFile": "assets/content_ro/Strings/schedules/Leo.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Lewis",
+      "FromFile": "assets/content_ro/Strings/schedules/Lewis.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Linus",
+      "FromFile": "assets/content_ro/Strings/schedules/Linus.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Marnie",
+      "FromFile": "assets/content_ro/Strings/schedules/Marnie.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Maru",
+      "FromFile": "assets/content_ro/Strings/schedules/Maru.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Pam",
+      "FromFile": "assets/content_ro/Strings/schedules/Pam.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Penny",
+      "FromFile": "assets/content_ro/Strings/schedules/Penny.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Pierre",
+      "FromFile": "assets/content_ro/Strings/schedules/Pierre.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Robin",
+      "FromFile": "assets/content_ro/Strings/schedules/Robin.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Sam",
+      "FromFile": "assets/content_ro/Strings/schedules/Sam.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Sandy",
+      "FromFile": "assets/content_ro/Strings/schedules/Sandy.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Sebastian",
+      "FromFile": "assets/content_ro/Strings/schedules/Sebastian.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Shane",
+      "FromFile": "assets/content_ro/Strings/schedules/Shane.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Vincent",
+      "FromFile": "assets/content_ro/Strings/schedules/Vincent.json",
+      "When": {
+        "Language": "ro"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Strings/schedules/Willy",
+      "FromFile": "assets/content_ro/Strings/schedules/Willy.json",
+      "When": {
+        "Language": "ro"
+      }
+    }
+  ]
+}

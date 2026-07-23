@@ -1,0 +1,10 @@
+{
+  "Name": "Romanian Font Fix",
+  "Author": "kerngesund",
+  "Version": "1.0.0",
+  "Description": "Teaches SpriteText's bold font to draw ă, Ă, ș, Ș, ț, Ț, needed for the Romanian Translation content pack.",
+  "UniqueID": "kerngesund.RomanianFontFix",
+  "EntryDll": "RomanianFontFix.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

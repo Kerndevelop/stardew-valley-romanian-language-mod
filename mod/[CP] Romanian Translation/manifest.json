@@ -1,0 +1,22 @@
+{
+  "Name": "Romanian Translation",
+  "Author": "kerngesund",
+  "Version": "1.0.0",
+  "Description": "Adds Romanian (Română) as a selectable language on the title screen.",
+  "UniqueID": "kerngesund.RomanianTranslation",
+  "MinimumApiVersion": "4.0.0",
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher",
+    "MinimumVersion": "2.0.0"
+  },
+  "Dependencies": [
+    {
+      "UniqueID": "Pathoschild.ContentPatcher",
+      "IsRequired": true
+    },
+    {
+      "UniqueID": "kerngesund.RomanianFontFix",
+      "IsRequired": true
+    }
+  ]
+}
