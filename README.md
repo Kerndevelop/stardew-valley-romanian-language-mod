@@ -25,15 +25,87 @@ This is not a professional translation and not a professional mod. It is a perso
 
 - Stardew Valley, installed with [SMAPI](https://smapi.io/) (the mod loader).
 - [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915), installed as its own mod.
-- Both parts of this mod, `Romanian Translation` and `Romanian Font Fix`. Neither works without the other.
+- Both parts of this mod, `Romanian Translation` and `Romanian Font Fix`. Neither works without the other. Both come prebuilt in the [latest release](https://github.com/Kerndevelop/stardew-valley-romanian-language-mod/releases/latest); nothing needs to be compiled to play.
 
 ## Installing the mod
 
-1. Install SMAPI if you have not already, following the instructions on [smapi.io](https://smapi.io/).
-2. Install Content Patcher from Nexus Mods into your Stardew Valley `Mods` folder.
-3. Download the latest release of this mod, or build it yourself (see "Building from source" below).
-4. Copy both mod folders, `[CP] Romanian Translation` and `RomanianFontFix`, into your Stardew Valley `Mods` folder.
-5. Launch the game through SMAPI. On the title screen, open the language menu and select "Română".
+There is nothing to compile. [Download the latest release](https://github.com/Kerndevelop/stardew-valley-romanian-language-mod/releases/latest), which ships both halves of the mod with the font fix already built, and copy the two folders into Stardew Valley's `Mods` folder. Building from source is only needed if you want to change the mod itself.
+
+Both parts are installed the same way: one folder each inside `Mods`, next to Content Patcher. When you are done, `Mods` should contain these three entries, alongside `ConsoleCommands` and `SaveBackup`, which SMAPI installs itself:
+
+```
+Stardew Valley/
+└── Mods/
+    ├── ContentPatcher/               # from Nexus Mods, a separate mod
+    ├── [CP] Romanian Translation/    # this repo's content pack
+    │   ├── manifest.json
+    │   ├── content.json
+    │   └── assets/
+    └── RomanianFontFix/              # this repo's compiled font fix
+        ├── manifest.json
+        ├── RomanianFontFix.dll
+        └── assets/
+```
+
+### Step 1: find your `Mods` folder
+
+The `Mods` folder sits directly inside the Stardew Valley game folder. SMAPI prints its exact location in the second line of its console window every time it starts (`Mods go here: ...`), which is the most reliable way to find it. Common default locations:
+
+| Platform | Typical path |
+| --- | --- |
+| Linux (Steam) | `~/.steam/steam/steamapps/common/Stardew Valley/Mods` |
+| Linux (Steam, alternate library) | `~/Games/Steam/steamapps/common/Stardew Valley/Mods` |
+| macOS (Steam) | `~/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS/Mods` |
+| Windows (Steam) | `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods` |
+| Windows (GOG) | `C:\Program Files (x86)\GOG Galaxy\Games\Stardew Valley\Mods` |
+
+In Steam you can also right-click Stardew Valley in your library and choose **Manage → Browse local files**.
+
+The rest of these instructions refer to that folder as `<GAME>/Mods`, and to the game folder itself as `<GAME>`.
+
+### Step 2: install SMAPI and Content Patcher
+
+1. Install [SMAPI](https://smapi.io/) following the instructions on its site, and start the game through SMAPI once to confirm it works. This creates the `Mods` folder if it does not exist yet.
+2. Download [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915) from Nexus Mods and unzip it so that `<GAME>/Mods/ContentPatcher/manifest.json` exists. Content Patcher 2.0.0 or newer is required.
+
+### Step 3: install both mod folders
+
+Download `RomanianLanguageMod-1.0.0.zip` from the [latest release](https://github.com/Kerndevelop/stardew-valley-romanian-language-mod/releases/latest) and unzip it. It contains two folders:
+
+- `[CP] Romanian Translation` — the translation itself, plain JSON and image files.
+- `RomanianFontFix` — the font fix, with `RomanianFontFix.dll` already compiled.
+
+Copy both into `<GAME>/Mods/`, keeping the folder names exactly as they are, square brackets included. Afterwards both `<GAME>/Mods/[CP] Romanian Translation/manifest.json` and `<GAME>/Mods/RomanianFontFix/manifest.json` must exist.
+
+Both folders are required. The content pack declares the font fix as a dependency, so SMAPI refuses to load it if the font fix is missing, and without the content pack the font fix has nothing to do.
+
+If you would rather work from a clone of this repository than a release zip, the font fix has to be compiled first; see [Building from source](#building-from-source) below, then come back to the next step.
+
+### Step 4: verify that both mods loaded
+
+Start the game the way you normally do with SMAPI installed (the Steam **Play** button, or running `StardewModdingAPI` from the game folder). SMAPI's console window lists everything it loaded at startup; you should see both parts, one as a mod and one as a content pack:
+
+```
+[SMAPI] Loaded 4 mods:
+[SMAPI]    Console Commands 4.5.2 by SMAPI | ...
+[SMAPI]    Content Patcher 2.9.1 by Pathoschild | ...
+[SMAPI]    Romanian Font Fix 1.0.0 by kerngesund | ...
+[SMAPI]    Save Backup 4.5.2 by SMAPI | ...
+
+[SMAPI] Loaded 1 content packs:
+[SMAPI]    Romanian Translation 1.0.0 by kerngesund | for Content Patcher | ...
+```
+
+A `Patched game code` warning naming Romanian Font Fix is expected and harmless; that is just SMAPI noting that the mod uses Harmony, which it must in order to draw the diacritics.
+
+If something is missing, the usual causes are:
+
+- **Neither one appears.** They went into the wrong folder. Check the `Mods go here:` line at the top of the SMAPI console and compare it to where you copied them.
+- **Only one appears, and SMAPI reports a missing dependency.** The two halves require each other. Redo whichever step above is missing.
+- **A folder is nested one level too deep**, for example `Mods/RomanianFontFix/RomanianFontFix/manifest.json`. SMAPI only looks one level down, so move the inner folder up.
+- **"Română" is missing from the language menu** even though both loaded. Make sure Content Patcher itself is installed and at least version 2.0.0.
+
+Then switch the language from the title screen, as shown below.
 
 ### Selecting "Română" in-game
 
@@ -57,37 +129,57 @@ Once the game is running, switch the language from the title screen. It only tak
 
 ## Building from source
 
-The content pack needs no build step; it is plain JSON and image files that SMAPI reads directly. Only the font fix needs to be compiled. In both cases, install the [.NET SDK](https://dotnet.microsoft.com/) (net6.0 target) first.
+Players do not need this section: the [latest release](https://github.com/Kerndevelop/stardew-valley-romanian-language-mod/releases/latest) ships the font fix already compiled. Build only if you want to change the mod itself.
 
-### Linux
+Only the font fix needs compiling. The content pack is plain JSON and image files that SMAPI reads directly, so it is installed by copying, exactly as in [step 3](#step-3-install-both-mod-folders) above:
 
-1. Build `mod/[Harmony] Romanian Font Fix/` in Release mode:
-   ```bash
-   cd "mod/[Harmony] Romanian Font Fix"
-   dotnet build -c Release
-   ```
-   This project uses [SMAPI's mod build package](https://www.nuget.org/packages/Pathoschild.Stardew.ModBuildConfig), which automatically copies the built mod into your Stardew Valley `Mods` folder and produces a release zip, as long as the game is installed at the path set by the `GamePath` property in `RomanianFontFix.csproj`. That property is currently set to a local Steam library path and will need to be changed to match your own installation, for example `~/.steam/steam/steamapps/common/Stardew Valley` or wherever your Steam library lives. You can either edit `GamePath` in the `.csproj` directly, or override it on the command line without editing the file:
-   ```bash
-   dotnet build -c Release -p:GamePath="/home/yourname/.steam/steam/steamapps/common/Stardew Valley"
-   ```
-2. Copy the whole `mod/[CP] Romanian Translation/` folder into your Stardew Valley `Mods` folder as well, since it is not built automatically.
-3. Launch the game through SMAPI and select "Română" from the title screen language menu.
+```bash
+cp -r "mod/[CP] Romanian Translation" "/path/to/your/Stardew Valley/Mods/"
+```
 
-### Windows
+Its `scripts/` subfolder is only used to regenerate `content.json` during development; it is harmless to copy along, and equally fine to delete from the installed copy.
 
-1. Build `mod/[Harmony] Romanian Font Fix/` in Release mode, either from a command prompt:
-   ```powershell
-   cd "mod\[Harmony] Romanian Font Fix"
-   dotnet build -c Release
-   ```
-   or by opening `RomanianFontFix.csproj` in Visual Studio and building the Release configuration.
+### Building the font fix
 
-   As on Linux, [SMAPI's mod build package](https://www.nuget.org/packages/Pathoschild.Stardew.ModBuildConfig) automatically copies the built mod into your Stardew Valley `Mods` folder and produces a release zip. On Windows it can usually detect the game folder automatically through the registry or a nearby Steam or GOG install, so the `GamePath` property in `RomanianFontFix.csproj` can often be left empty or removed. If it cannot find the game, set `GamePath` explicitly, either in the `.csproj` or on the command line:
-   ```powershell
-   dotnet build -c Release -p:GamePath="C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley"
-   ```
-2. Copy the whole `mod\[CP] Romanian Translation\` folder into your Stardew Valley `Mods` folder as well, since it is not built automatically.
-3. Launch the game through SMAPI and select "Română" from the title screen language menu.
+Install the [.NET SDK](https://dotnet.microsoft.com/download) (6.0 or newer; the project targets `net6.0`), then build in Release mode:
+
+```bash
+cd "mod/[Harmony] Romanian Font Fix"
+dotnet build -c Release -p:GamePath="/path/to/your/Stardew Valley"
+```
+
+The project uses [SMAPI's mod build package](https://www.nuget.org/packages/Pathoschild.Stardew.ModBuildConfig). On a successful Release build it copies the finished mod into `<GAME>/Mods/RomanianFontFix/` and writes a distributable zip next to the build output, so there is nothing to copy by hand. Confirm it landed in the right place by looking for this line:
+
+```
+[mod build package] Copying the mod files to .../Stardew Valley/Mods/RomanianFontFix...
+```
+
+Then verify the result in-game, as in [step 4](#step-4-verify-that-both-mods-loaded) above.
+
+### Setting `GamePath`
+
+`GamePath` is where builds usually go wrong. It must point at the game folder, the one containing `Stardew Valley.dll`, not at `Mods`. `RomanianFontFix.csproj` hardcodes a default:
+
+```xml
+<GamePath Condition="'$(GamePath)' == ''">/home/kerngesund/Games/Steam/steamapps/common/Stardew Valley</GamePath>
+```
+
+That is the author's own Steam library path and will not match your machine. Either edit that line, or leave the file alone and override it per build, which is what the `Condition` is there for:
+
+```bash
+dotnet build -c Release -p:GamePath="/home/yourname/.steam/steam/steamapps/common/Stardew Valley"
+```
+
+If the path is wrong, the build fails with an error from the mod build package saying it could not find the game folder.
+
+On **Windows** you can build from a command prompt, or open `RomanianFontFix.csproj` in Visual Studio and build the Release configuration:
+
+```powershell
+cd "mod\[Harmony] Romanian Font Fix"
+dotnet build -c Release -p:GamePath="C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley"
+```
+
+There the build package can usually detect the game by itself through the registry or a nearby Steam or GOG install, so you can drop `-p:GamePath` and delete the hardcoded `<GamePath>` line from the `.csproj` entirely. Only set it explicitly if the build reports that it cannot find the game.
 
 ## Repo layout
 
