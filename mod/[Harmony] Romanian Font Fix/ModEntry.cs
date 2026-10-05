@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using HarmonyLib;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -33,6 +34,9 @@ public class ModEntry : Mod
     private static Rectangle CellRect(int index, int extraHeight = 0) =>
         new(x: index % 16 * 8, y: index / 16 * 16, width: 8, height: 16 + extraHeight);
 
+    // Font instances OnUpdateTicked has already handled.
+    private readonly ConditionalWeakTable<SpriteFont, object?> checkedLiveFonts = new();
+
     public override void Entry(IModHelper helper)
     {
         Harmony harmony = new(this.ModManifest.UniqueID);
@@ -45,7 +49,11 @@ public class ModEntry : Mod
             prefix: new HarmonyMethod(typeof(ModEntry), nameof(DrawString_Prefix))
         );
 
+        if (Constants.TargetPlatform == GamePlatform.Android)
+            AndroidLanguageMenuPatcher.Apply(harmony, this.Monitor);
+
         helper.Events.Content.AssetRequested += this.OnAssetRequested;
+        helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
     }
 
     private void OnAssetRequested(object? sender, AssetRequestedEventArgs e)
@@ -58,6 +66,39 @@ public class ModEntry : Mod
         else if (e.NameWithoutLocale.IsEquivalentTo("Fonts/SmallFont"))
             e.Edit(asset => SmallFontPatcher.Patch(this.Helper, this.Monitor, asset.GetData<SpriteFont>()));
     }
+
+    // On Android, Fonts/SmallFont is already cached when mods load, so AssetRequested never fires
+    // for it. Patch the fonts the game is drawing with instead; the patchers work in place and
+    // skip glyphs a font already has.
+    private void OnUpdateTicked(object? sender, UpdateTickedEventArgs e)
+    {
+        if (!IsRomanianActive())
+            return;
+
+        // dialogueFont first: with Android's bigger-fonts option, smallFont is the same instance.
+        this.PatchLiveFont(Game1.dialogueFont, SpriteFont1Patcher.Patch);
+        this.PatchLiveFont(Game1.smallFont, SmallFontPatcher.Patch);
+    }
+
+    private void PatchLiveFont(SpriteFont? font, Action<IModHelper, IMonitor, SpriteFont> patch)
+    {
+        if (font is null || this.checkedLiveFonts.TryGetValue(font, out _))
+            return;
+
+        this.checkedLiveFonts.Add(font, null);
+        try
+        {
+            patch(this.Helper, this.Monitor, font);
+        }
+        catch (Exception ex)
+        {
+            this.Monitor.Log($"Couldn't add the Romanian diacritics to a font the game already had loaded:\n{ex}", LogLevel.Warn);
+        }
+    }
+
+    private static bool IsRomanianActive() =>
+        LocalizedContentManager.CurrentLanguageCode == LocalizedContentManager.LanguageCode.mod
+        && LocalizedContentManager.CurrentModLanguage?.LanguageCode == "ro";
 
     private static bool GetSourceRectForChar_Prefix(char c, bool junimoText, ref Rectangle __result)
     {
@@ -105,8 +146,7 @@ public class ModEntry : Mod
 
     private static bool IsRomanianLoadingBannerText(string s)
     {
-        if (LocalizedContentManager.CurrentLanguageCode != LocalizedContentManager.LanguageCode.mod
-            || LocalizedContentManager.CurrentModLanguage?.LanguageCode != "ro")
+        if (!IsRomanianActive())
             return false;
 
         // Game1.DrawLoadScreen appends 0-3 trailing dots that tick over time (e.g. "Încărcare în

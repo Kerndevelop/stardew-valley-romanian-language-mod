@@ -32,10 +32,16 @@ internal static class DiacriticSpriteFontPatcher
     private static readonly FieldInfo DefaultGlyphIndexField = typeof(SpriteFont).GetField("_defaultGlyphIndex", BindingFlags.NonPublic | BindingFlags.Instance)!;
     private static readonly FieldInfo CharactersBackingField = typeof(SpriteFont).GetField("<Characters>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance)!;
 
-    public static void Patch(IModHelper helper, IMonitor monitor, SpriteFont font, NewGlyphSpec[] newGlyphs, string assetLabel)
+    public static void Patch(IModHelper helper, IMonitor monitor, SpriteFont font, NewGlyphSpec[] allGlyphSpecs, string assetLabel)
     {
         Dictionary<char, SpriteFont.Glyph> glyphs = font.GetGlyphs();
-        if (glyphs.ContainsKey(newGlyphs[0].Character))
+
+        // Check per glyph: some localized fonts (e.g. SpriteFont1.hu-HU) already have ă/Ă but
+        // not ș/Ș/ț/Ț.
+        NewGlyphSpec[] newGlyphs = allGlyphSpecs
+            .Where(g => !glyphs.ContainsKey(g.Character) && glyphs.ContainsKey(g.BaseCharacter))
+            .ToArray();
+        if (newGlyphs.Length == 0)
             return;
 
         Texture2D oldTexture = (Texture2D)TextureField.GetValue(font)!;
@@ -120,6 +126,6 @@ internal static class DiacriticSpriteFontPatcher
         DefaultGlyphIndexField.SetValue(font, DefaultGlyphIndexField.GetValue(newFont));
         CharactersBackingField.SetValue(font, CharactersBackingField.GetValue(newFont));
 
-        monitor.Log($"Added ă/Ă/ș/Ș/ț/Ț to {assetLabel}.", LogLevel.Trace);
+        monitor.Log($"Added {string.Join("/", newGlyphs.Select(g => g.Character))} to {assetLabel}.", LogLevel.Trace);
     }
 }

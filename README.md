@@ -23,7 +23,7 @@ This is not a professional translation and not a professional mod. It is a perso
 
 ## Requirements
 
-- Stardew Valley, installed with [SMAPI](https://smapi.io/) (the mod loader).
+- Stardew Valley, installed with [SMAPI](https://smapi.io/) (the mod loader). On Android that means [SMAPI Loader](https://github.com/NRTnarathip/SMAPILoader); see [Android](#android) below.
 - [Content Patcher](https://www.nexusmods.com/stardewvalley/mods/1915), installed as its own mod.
 - Both parts of this mod, `Romanian Translation` and `Romanian Font Fix`. Neither works without the other. Both come prebuilt in the [latest release](https://github.com/Kerndevelop/stardew-valley-romanian-language-mod/releases/latest); nothing needs to be compiled to play.
 
@@ -58,6 +58,7 @@ The `Mods` folder sits directly inside the Stardew Valley game folder. SMAPI pri
 | macOS (Steam) | `~/Library/Application Support/Steam/steamapps/common/Stardew Valley/Contents/MacOS/Mods` |
 | Windows (Steam) | `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods` |
 | Windows (GOG) | `C:\Program Files (x86)\GOG Galaxy\Games\Stardew Valley\Mods` |
+| Android (SMAPI Loader) | `Android/data/abc.smapi.gameloader/files/Mods` on the internal storage |
 
 In Steam you can also right-click Stardew Valley in your library and choose **Manage → Browse local files**.
 
@@ -126,6 +127,14 @@ Once the game is running, switch the language from the title screen. It only tak
 4. The title screen, its buttons, and the rest of the game now display in Romanian.
 
    ![Title screen fully translated into Romanian](docs/screenshots/04-title-romanian.png)
+
+### Android
+
+The mod also works on Android through [SMAPI Loader](https://github.com/NRTnarathip/SMAPILoader). Tested with SMAPI Loader 1.1.7 (SMAPI 4.3.2.5) and Stardew Valley 1.6.15.3.
+
+Install it the same way: Content Patcher and this mod's two folders go into `Android/data/abc.smapi.gameloader/files/Mods` on the internal storage.
+
+The language menu there is one scrolling list instead of pages. Tap the speech bubble button on the title screen, scroll to the bottom, and tap "Română".
 
 ## Building from source
 
@@ -201,6 +210,7 @@ There the build package can usually detect the game by itself through the regist
         ├── DiacriticSpriteFontPatcher.cs
         ├── SpriteFont1Patcher.cs
         ├── SmallFontPatcher.cs
+        ├── AndroidLanguageMenuPatcher.cs  # adds mod languages to Android's hardcoded language menu
         └── assets/                  # glyph PNGs composited onto SpriteFont1/SmallFont at runtime
 ```
 
@@ -224,6 +234,14 @@ The mod's `content.json` sets `"UseLatinFont": true`, which makes `SpriteText` u
 The same six diacritics also render correctly on the Load and Save Game screens (`Fonts/SpriteFont1`). That font is a compiled XNA `SpriteFont`, not a plain texture, and there is no public API to add a glyph to it after the XNB has loaded. To work around this, `RomanianFontFix` hooks `Content.AssetRequested` for that asset and, on load, composites the same six hand-drawn glyphs onto the vanilla texture using a `RenderTarget2D` (needed because the vanilla texture is not in a plain `Color` format that `GetData` can read directly), then rebuilds the `SpriteFont` through its public constructor and copies its private fields onto the live instance, so every existing reference, including `Game1.dialogueFont`, sees the change immediately.
 
 The same six diacritics also render correctly through `Fonts/SmallFont`, covering item tooltips, the fishing catch popup, HUD messages, chat, and more. It is patched the same way as `SpriteFont1`: `RomanianFontFix` hooks `Content.AssetRequested` for that asset too and runs the same composite-then-swap-private-fields logic, implemented in `SmallFontPatcher.cs` and shared with `SpriteFont1Patcher.cs` through `DiacriticSpriteFontPatcher.cs`.
+
+### Android
+
+Two things differ on Android, and `RomanianFontFix` handles both.
+
+The language menu is a separate implementation that lists the 12 built-in languages from a hardcoded `switch` and never reads `Data/AdditionalLanguages`. The game itself supports mod languages there, so only the button is missing. `AndroidLanguageMenuPatcher.cs` adds one for each `Data/AdditionalLanguages` entry and handles selecting and drawing it. It is applied only on Android and uses reflection for the Android-only members, which do not exist in the desktop assemblies.
+
+`Fonts/SmallFont` is already cached when mods load, so `Content.AssetRequested` never fires for it. While Romanian is active, the mod also patches the live `Game1.dialogueFont` and `Game1.smallFont` instances directly, once each. The patcher adds only the glyphs a font is missing, since some localized fonts such as `Fonts/SpriteFont1.hu-HU` already have ă and Ă but not ș, Ș, ț and Ț.
 
 ## Regenerating the content pack
 
